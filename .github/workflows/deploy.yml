@@ -18,15 +18,6 @@ jobs:
         with:
           dotnet-version: '6.0'  # Ensure this matches your project version
 
-      - name: Restore Dependencies
-        run: dotnet restore D:/CMS Projects/Meghalaya/FinalCode/MeghalayaUIP.sln  # Change "D:/CMS Projects/Meghalaya/FinalCode/MeghalayaUIP.sln" to your actual solution file path
-
-      - name: Build Project
-        run: dotnet build D:/CMS Projects/Meghalaya/FinalCode/MeghalayaUIP.sln --configuration Release --no-restore
-
-      - name: Publish Project
-        run: dotnet publish D:/CMS Projects/Meghalaya/FinalCode/MeghalayaUIP.sln -c Release -o published
-
       - name: Deploy to Remote Server
         uses: appleboy/scp-action@master
         with:
