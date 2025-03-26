@@ -16,16 +16,16 @@ jobs:
       - name: Set up .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '6.0'  # Change to your .NET version
+          dotnet-version: '8.0'  # Ensure this matches your project version
 
       - name: Restore Dependencies
-        run: dotnet restore
+        run: dotnet restore MyApp/MyProject.sln  # Change "MyApp/MyProject.sln" to your actual solution file path
 
       - name: Build Project
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build MyApp/MyProject.sln --configuration Release --no-restore
 
       - name: Publish Project
-        run: dotnet publish -c Release -o published
+        run: dotnet publish MyApp/MyProject.sln -c Release -o published
 
       - name: Deploy to Remote Server
         uses: appleboy/scp-action@master
