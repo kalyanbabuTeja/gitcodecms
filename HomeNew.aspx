@@ -6,7 +6,7 @@
     <%--  <p style="background: #a8cfe5; display: flex; flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: center; align-items: center; color: #000; padding: 2px 2px;">
         &nbsp;<i class="fi fi-br-bell-notification-social-media" style="line-height: 10px;"></i> &nbsp; Did you Know :
         <marquee style="width: 86%; font-weight: 300;">
-            <b> Meghalaya will host the National Games in 2024-News</b></marquee>
+            <b> Meghalaya will host the National Games in 2024</b></marquee>
     </p>--%>
     <!-- main-slider -->
     <video autoplay="" muted="" loop="" id="myVideo" style="top: -80px; opacity: 1; width: 100%; margin-top: -275px;">
