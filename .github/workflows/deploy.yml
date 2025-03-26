@@ -26,3 +26,12 @@ jobs:
           password: ${{ secrets.SERVER_PASS }}
           source: "published/*"
           target: "/GITPASS"  # Change to your target folder
+
+          - name: Deploy to Remote Server using SCP
+  shell: pwsh
+  run: |
+    $password = ConvertTo-SecureString "9jfxudfvSRC5KT%929" -AsPlainText -Force
+    $credential = New-Object System.Management.Automation.PSCredential ("Administrator", $password)
+    New-SSHSession -ComputerName "10.9.246.173" -Credential $credential -AcceptKey
+    Set-SCPItem -ComputerName "10.9.246.173" -Credential $credential -Path "published/*" -Destination "/GITPASS"
+
