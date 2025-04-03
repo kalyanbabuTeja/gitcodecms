@@ -18,7 +18,7 @@ jobs:
           $password = ConvertTo-SecureString '9jfxudfvSRC5KT%929' -AsPlainText -Force
           $credential = New-Object System.Management.Automation.PSCredential ('Administrator', $password)
 
-          Invoke-Command -Clap_Admin1 10.9.246.173 -Credential $credential -ScriptBlock {
+          Invoke-Command -ComputerName 10.9.246.173 -Credential $credential -ScriptBlock {
               param($source, $destination)
               Copy-Item -Path $source -Destination $destination -Recurse -Force
           } -ArgumentList "D:\CMS Projects\Meghalaya\gitcode", "D:\Kalyanbabu\UPRERA\gitcmscode"
